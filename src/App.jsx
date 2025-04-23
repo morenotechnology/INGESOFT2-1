@@ -12,13 +12,16 @@ export default function App() {
       <Routes>
         {/* Redirección desde raíz a login */}
         <Route path="/" element={<Navigate to="/login" />} />
-        
-        {/* Todas las rutas dentro del layout con sidebar */}
+
+        {/* Rutas SIN layout (no deben tener navbar/sidebar) */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+
+        {/* Rutas CON layout */}
         <Route element={<SidebarLayout />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/profile" element={<Profile />} />
+          {/* aquí puedes poner más rutas que sí usan el sidebar */}
         </Route>
       </Routes>
     </Router>
