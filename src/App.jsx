@@ -5,6 +5,7 @@ import Register from "./components/Register";
 import ForgotPassword from "./components/ForgotPassword";
 import Profile from "./components/Profile";
 import SidebarLayout from "./components/SidebarLayout";
+import Dashboard from "./components/Dashboard";
 
 export default function App() {
   return (
@@ -17,11 +18,12 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         {/* Rutas CON layout */}
         <Route element={<SidebarLayout />}>
           <Route path="/profile" element={<Profile />} />
-          {/* aquí puedes poner más rutas que sí usan el sidebar */}
+  
         </Route>
       </Routes>
     </Router>

@@ -218,3 +218,80 @@ html, body {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
 }
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #7f00ff, #4facfe);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 20px;
+  color: white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.sidebar .avatar {
+  background: #ffffff22;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nav-item:hover {
+  font-weight: bold;
+  color: #fff;
+}
+/* Contenedor principal del dashboard */
+.dashboard-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Tarjetas tipo resumen y citas */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid para las tarjetas de citas */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Botones de acceso rápido */
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.quick-actions .btn-login {
+  flex: 1 1 200px;
+}
