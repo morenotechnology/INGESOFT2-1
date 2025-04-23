@@ -11,7 +11,6 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        {/* Redirección desde raíz a login */}
         <Route path="/" element={<Navigate to="/login" />} />
 
         {/* Rutas SIN layout (no deben tener navbar/sidebar) */}
